@@ -1,3 +1,242 @@
-/* *{
-    --name-variavel: style;
-} */
+*{
+    --background: #FB6B6B;
+    --righteous: 'Righteous', cursive;
+    --cor-logo-telaInicial: rgba(255, 255, 255, 1);
+    --background-flashcard-virado: rgba(255, 255, 212, 1);
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Recursive', sans-serif;
+}
+
+/* ESTILIZAÇÃO TELA DE ENTRADA */
+main .tela-inicial, main .deck-flashcards{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.tela-inicial aside{
+    height: 100%;
+    flex-direction: column;
+}
+
+.tela-inicial .logo{
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    /* background-color: blue; */
+    margin-bottom: 73px;
+}
+
+.tela-inicial .logo figure{
+    width: 55px;
+    height: 65px;
+}
+
+.logo figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.tela-inicial .logo p{
+    width: 152px;
+    height: 35px;
+    font-family: var(--righteous);
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: -0.012em;
+    text-align: center;
+    color: var(--cor-logo-telaInicial)
+}
+
+.tela-inicial .botao{
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+}
+
+.tela-inicial .botao button{
+    width: 141px;
+    height: 31px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(215, 9, 0, 1);
+    border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tela-inicial .botao p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+    color: rgba(215, 9, 0, 1);
+}
+
+/* ESTILIZAÇÃO TELA DE FLASHCARDS */
+.deck-flashcards header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    margin-top: 19px;
+    margin-bottom: 37px;
+    /* background-color: blue; */
+}
+
+.deck-flashcards header img{
+    width: 26px;
+    height: 30px;
+}
+
+.deck-flashcards header p{
+    width: 101.587px;
+    height: 22px;
+    font-family: var(--righteous);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.012em;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.deck-flashcards .opcoes-flashcards{
+    margin-bottom: 55px;
+}
+
+.opcoes-flashcards .flashcard{
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    margin: 5px 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 0;
+}
+
+.flashcard p{
+    padding-left: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+}
+.flashcard img{
+    padding-right: 12px;
+    font-size: 15px;
+}
+
+.deck-flashcards footer{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
+}
+
+.deck-flashcards footer p{
+    width: 97px;
+    height: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
+}
+
+.flashcard.escondido{
+    display: none;
+}
+
+.opcoes-flashcards .pergunta-flashcard, 
+.opcoes-flashcards .resposta-flashcard{
+    min-height: 80px;
+    border-radius: 5px;
+    background-color: var(--background-flashcard-virado);
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin: 0 11px;
+    margin-bottom: 14px;
+}
+
+.pergunta-flashcard p, .resposta-flashcard p{
+    min-height: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pergunta-flashcard img{
+    font-size: 20px;
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+}
+
+.resposta-flashcard .informar-acao{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+
+.informar-acao div{
+    width: 55px;
+    height: 25px;
+    margin: 0 5px;
+    /* background-color: #FB6B6B; */
+    border-radius: 5px;
+}
+
+.informar-acao div p{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CLASSES DE MANIPULAÇÃO */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escondido{
+    display: none;
+}
+
+.fonte-pergunta{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    padding: 0 6px;
+    padding-top: 13px;
+    color: rgba(51, 51, 51, 1);
+}
+
+.red{background: rgba(255, 48, 48, 1);}
+.orange{background: rgba(255, 146, 46, 1);}
+.green{background: rgba(47, 190, 52, 1);}
