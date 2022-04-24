@@ -1,8 +1,7 @@
 import { useState } from "react";
 import arrFlashCards from "../../data/dados.js";
 import randomEmbaralhar from "../../data/random.js";
-// import Flashcard from "./../Flashcard";
-// import Icone from "./../Icone";
+import Flashcard from "./../FlashCard";
 import LogoPequeno from "./../../assets/img/logo-pequeno.png";
 import "./style.css";
 
@@ -15,8 +14,11 @@ function TelaDeck(){
             setCards([...arrFlashCards]);
             return <></>;
         }else{
+            const chave = Math.random() * 10;
             return cards.map((card, index) => {
-                return <p key={index}>{card.pergunta}</p>
+                const { pergunta, resposta } = card;
+                return <Flashcard key={chave+index} frente={pergunta} 
+                verso={resposta} number={index}/>
             });
         }
     }

@@ -39,7 +39,8 @@
 }
 
 .Deck main {
-  margin: 150px 0px;
+  margin-top: 380px;
+  margin-bottom: 70px;
 }
 
 .Deck .resultado {
