@@ -3,7 +3,6 @@ import Logo from "./../../assets/img/logo.png";
 import "./style.css";
 
 function TelaInicial(){
-    // eslint-disable-next-line no-unused-vars
     const [tela, setTela] = useState(true);
     
     return(
