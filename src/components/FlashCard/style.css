@@ -81,3 +81,9 @@
 .Flashcard .finalizado .acerto {
   color: var(--cor-zap);
 }
+
+@media (min-width: 960px) {
+  .Flashcard .painel{
+    width: 100%;
+  }
+}

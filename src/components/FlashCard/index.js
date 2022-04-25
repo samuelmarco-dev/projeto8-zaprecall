@@ -3,10 +3,11 @@ import verificarPasso from './etapa';
 import './style.css';
 
 function Flashcard(props){
-    const {frente, verso, number} = props;
-    const [passo, setPasso] = useState(0);
+    const {frente, verso, indice, aoFinalizar} = props;
+    const [status, setStatus] = useState({etapa: 0,resultado: ""});
 
-    const renderizarPasso = verificarPasso(passo, frente, verso, number, setPasso);
+    const renderizarPasso = 
+    verificarPasso(status, frente, verso, indice, setStatus, aoFinalizar);
 
     return (
         <div className="Flashcard">

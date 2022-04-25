@@ -39,8 +39,9 @@
 }
 
 .Deck main {
-  margin-top: 380px;
-  margin-bottom: 70px;
+  height: calc(100vh - 240px);
+  overflow-y: auto;
+  margin-bottom: 60px;
 }
 
 .Deck .resultado {
@@ -50,7 +51,7 @@
 .Deck footer {
   width: 100%;
   min-height: 70px;
-  padding: 25px 115px;
+  padding: 25px;
   font-size: 18px;
   background-color: white;
   color: black;
@@ -59,4 +60,10 @@
   left: 0;
   position: fixed;
   text-align: center;
+}
+
+@media (min-width: 960px) {
+  .Deck main{
+    width: 60vw;
+  }
 }
